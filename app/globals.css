@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  scroll-behavior: smooth !important;
+}
+
+/* It makes the HTML progress bar filling smooth when value change. */
+progress::-webkit-progress-value {
+  transition: 0.6s width ease-out;
+}
+
+@layer base {
+  .btn-gradient {
+    @apply !bg-gradient !bg-[length:300%_300%] hover:saturate-[1.2] shadow duration-100 !border-0 !border-transparent !bg-transparent animate-shimmer disabled:!bg-none disabled:!bg-gray-500/30  !text-white;
+  }
+  .btn {
+    @apply !capitalize;
+  }
+}
+
+.btn-primary {
+  @apply text-white;
+}
+
+h1 {
+  @apply font-normal;
+  @apply text-4xl;
+}
+
+h5 {
+  @apply font-normal;
+  @apply text-lg;
+}
+
+.rpv-core__viewer {
+  --rpv-color-primary: #1976d2;
+  --rpv-color-secondary: #424242;
+  --rpv-page-background: #ccc;
+  --rpv-page-border: 0px solid rgba(0, 0, 0, 0.1);
+  --rpv-page-margin: 8px auto;
+  --rpv-background-color: #ccc;
+  --rpv-viewer-background: #ccc;
+}
+
+/* Target the specific container */
+.rpv-core__viewer-container {
+  background-color: #ccc;
+  border: 0px;
+}
+
+.rpv-default-layout__container {
+  border: 0px !important;
+  border-left: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Target the pages container */
+.rpv-core__pages-container {
+  background-color: #ccc;
+}
+
+/* Target the page canvas */
+.rpv-core__canvas-layer {
+  background-color: #ccc !important;
+}
+
+/* Target individual page container */
+.rpv-core__page-layer {
+  background-color: #ccc !important;
+}
+
+/* Target the page content */
+.rpv-core__page-content {
+  background-color: #ccc !important;
+}
+
+.rpv-core__inner-page {
+  background-color: #F6F6F9 !important;
+}
+
+/* Custom styles for the PDF viewer toolbar */
+.custom-toolbar .rpv-core__toolbar {
+  background-color: #fff !important; /* Change toolbar background color */
+  color: #fff; /* Change toolbar text color */
+}
+
+/* Custom styles for the toolbar buttons */
+.custom-toolbar .rpv-core__toolbar-button {
+  background-color: #fff !important; /* Change button background color */
+  color: #fff; /* Change button text color */
+  border: none; /* Remove button border */
+  border-radius: 4px; /* Add border radius */
+  padding: 8px; /* Add padding */
+  margin: 0 4px; /* Add margin between buttons */
+}
+
+.custom-toolbar .rpv-core__toolbar-button:hover {
+  background-color: #fff !important; /* Change button background color on hover */
+}
+
+/* Custom styles for the zoom buttons */
+.custom-toolbar .rpv-core__toolbar-button--zoom-in,
+.custom-toolbar .rpv-core__toolbar-button--zoom-out {
+  background-color: #0066cc; /* Change zoom button background color */
+  color: #fff; /* Change zoom button text color */
+}
+
+.custom-toolbar .rpv-core__toolbar-button--zoom-in:hover,
+.custom-toolbar .rpv-core__toolbar-button--zoom-out:hover {
+  background-color: #005bb5; /* Change zoom button background color on hover */
+}
+
+.rpv-core__page-layer--single {
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+  background-color: #ccc !important;
+}
+
+/* Override the default spinner animation */
+.loading-spinner {
+  animation: spin 0.8s linear infinite !important;
+}
+
+/* Define the keyframes for the spin animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

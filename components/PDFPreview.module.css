@@ -1,0 +1,39 @@
+/* components/PDFPreview.module.css */
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribute space between left and right sections */
+    padding: 16px;
+    background-color: #fff; /* Toolbar background */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Toolbar border */
+    width: 100%;
+    height: 60px; /* Fixed height for vertical centering */
+  }
+  
+  .toolbarSection {
+    display: flex;
+    align-items: center;
+  }
+  
+  .toolbarItem {
+    margin-right: 8px;
+    margin-top: 10px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .toolbarItem:last-child {
+    margin-right: 0; /* Remove margin for the last item */
+  }
+  
+  .toolbarButton {
+    /* You can add additional custom styles here if needed */
+  }
+  
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
